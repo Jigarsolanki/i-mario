@@ -21,9 +21,6 @@ Q.Sprite.extend('Enemy',{
       this.destroy();
       this.p.healthDisplay.destroy();
     }
-    // TODO: Stage an enemy death scene
-    //Q.audio.play('/sounds/mario_die.wav');
-    //Q.stageScene("playerDead",1, { label: "You Died" });
   },
   addEventListeners: function() {
     this.add('2d, aiBounce, animation');
