@@ -20,7 +20,7 @@ require(['./src/boss_fire'], function (BossFire) {
       this.on("bump.left,bump.right,bump.bottom,bump.top",function(collision) {
         if(collision.obj.isA("Player") && this.p.state != "dead") {
           Q.audio.play('/sounds/mario_die.wav');
-          Q.stageScene("playerDead",1, { label: "You Died" });
+          Q.stageScene("PlayerDead",1, { label: "You Died" });
           collision.obj.destroy();
           collision.obj.p.healthDisplay.destroy();
         }

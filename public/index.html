@@ -1,14 +1,17 @@
 <html>
   <head>
-    <script src="/lib/require.min.js"></script>
-    <script src="lib/quintus-all.js"></script>
+    <script src="lib/quintus-all.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script>
-      require(["src/game"]);
-    </script>
   </head>
   <body>
-    <span id="health" class="health">Hi</span>
-    <span id="fireballs" class="fireballs">Hi</span>
+    <span id="health" class="health">Health: </span>
+    <span id="fireballs" class="fireballs">Fireballs: </span>
+    <span id="players" class="players">Players: </span>
+
+    <script src="/lib/require.min.js"></script>
+    <script>
+      require(["/src/game.js"]);
+    </script>
   </body>
 </html>

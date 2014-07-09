@@ -13,8 +13,11 @@ require([], function () {
       this.on("sensor");
     },
     sensor: function (obj) {
-      this.stage.trigger("complete");
-      this.destroy();
+      if (obj.isA('Player')){
+        this.stage.trigger("complete");
+      } else {
+        return;
+      }
     }
   });
 });
